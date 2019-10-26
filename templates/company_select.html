@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>Select Company</title>
+{% endblock %}
+
+{% block body %}
+
+<h1 class='text-center text-light mt-4'>We found multiple companies with your search parameter</h1>
+    <div class="row">
+        <div class='col-sm-12 col-xs-12 col-md-6, col-lg-6 mx-auto mt-5'>
+            <div class='bg-light mx-auto p-4 mt-2'>
+                <h4>Results</h4>
+                 <div class='d-flex justify-content-center mt-3'>
+                    <form action="{{ url_for('search_company')}}" method="POST">
+                        <div class="form-group">
+                            {% for text in prediction_text %}
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="{{text}}" value="{{text}}" checked>
+                            <label class="form-check-label" for="{{text}}">
+                            {{text}}
+                            </label><br>
+                            {% endfor %}
+                             <div class="form-group">
+                                    <input type="submit" id="submit" class=" btn btn-lg form-control btn-dark" value="Search">
+                            </div>
+                        </div>
+
+                    </form>
+                 </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <br>
+
+
+{% endblock %}

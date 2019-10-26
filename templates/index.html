@@ -12,13 +12,18 @@
                 <p class="text-center">This is the first step in our job verification process.<br>
                     Normally we'd automate the process of searching CAC website, but they implement CAPTCHA.<br>
                     We're currently scraping the CAC website "semi-automatically", and until that's done,<br>
-                    Our database is severely limited for now, so search hng tech
+                    Our database is severely limited for now, so search hng tech<br>
+                    Or you can enter your interview invitation message for us to extract information from<br>
+                    to verify job
                     </p>
                 <div class='d-flex justify-content-center mt-3'>
                     <form action="">
                         <div class="form-group">
                             <a class='btn btn-md bg-dark mr-2 mb-2 text-light form-control' href="{{url_for('company_find')}}">
                                 <p>Search for the company on our CAC database</p>
+                            </a>
+                            <a class='btn btn-md bg-dark mr-2 mb-2 text-light form-control' href="{{url_for('parser')}}">
+                                <p>Enter your Job interview invitation message</p>
                             </a>
                         </div>
 
