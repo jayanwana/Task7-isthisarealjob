@@ -164,8 +164,8 @@ def main():
     parser.add_argument('--options', type=str, default=r'C:\Users\user\AppData\Local\Google\Chrome\User Data\Default',
                         help='Path to Google Chrome user data for captcha ease')
     args = parser.parse_args()
-    options = r'C:\Users\user\AppData\Local\Google\Chrome\User Data\Default'
-    print(cac_scraper(args.search_string, options))
+    # options = r'C:\Users\user\AppData\Local\Google\Chrome\User Data\Default'
+    print(cac_scraper(args.search_string))
 
 
 if __name__ == '__main__':
